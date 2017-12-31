@@ -39,7 +39,7 @@ namespace ReleaseOss.Data
         {
             foreach (var f in folder.EnumerateFiles("*.sln"))
             {
-                Files.Add(new RelevantFile(f, new string[0]));
+                Files.Add(new SolutionFile(f, new string[0]));
             }
             return null;
         }

@@ -52,6 +52,7 @@ namespace ReleaseOss.Data
         {
             get
             {
+                yield return solutions;
                 yield return modules;
                 yield return releaseNotes;
                 yield return helpSources;

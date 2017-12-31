@@ -38,6 +38,9 @@
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
+    <Reference Include="MvsSln, Version=2.0.0.24315, Culture=neutral, PublicKeyToken=87f0bd8fb7f0a2c4, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvsSln.2.0.0\lib\net40\MvsSln.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -75,6 +78,7 @@
     <Compile Include="Data\ProjectOutputInfo.cs" />
     <Compile Include="Data\SampleModuleSourceFileCollection.cs" />
     <Compile Include="Data\SampleProjectFile.cs" />
+    <Compile Include="Data\SolutionFile.cs" />
     <Compile Include="OutputHelper.cs" />
     <Compile Include="OutputKind.cs" />
     <Compile Include="Setup\CommandLineSetupSettings.cs" />

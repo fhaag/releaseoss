@@ -120,7 +120,6 @@ namespace ReleaseOss.Data
                                     newElements.Add(newRefEl);
                                 }
 
-                                Console.WriteLine("Replacing");
                                 var parentNode = pjRef.ParentNode;
                                 for (int i = 0; i < newElements.Count; i++)
                                 {
