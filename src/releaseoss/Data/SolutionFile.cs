@@ -29,6 +29,9 @@ using System.IO;
 using System.Linq;
 
 using net.r_eg.MvsSln;
+using net.r_eg.MvsSln.Core;
+using net.r_eg.MvsSln.Core.ObjHandlers;
+using net.r_eg.MvsSln.Core.SlnHandlers;
 
 namespace ReleaseOss.Data
 {
@@ -53,7 +56,15 @@ namespace ReleaseOss.Data
                     OutputHelper.WriteLine(OutputKind.Debug, "Found reference to project {0}.", projectId);
                 }
 
-                
+                var pjWriteHandlers = new Dictionary<Type, HandlerValue>
+                {
+                    [typeof(LProject)] = new HandlerValue(new WProject(null, sln.Result.ProjectDependencies)) // TODO: set list of projects to include
+                };
+
+                using (var w = new SlnWriter("TODO", pjWriteHandlers))
+                {
+                    w.Write(sln.Result.Map);
+                }
             }
         }
     }
